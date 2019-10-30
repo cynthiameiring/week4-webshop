@@ -1,5 +1,6 @@
 import React from "react";
 import "./Product.css";
+import { Link } from "react-router-dom";
 
 export default function ProductList(props) {
   return (
@@ -11,7 +12,10 @@ export default function ProductList(props) {
           <img src={product.imageUrl} alt=""></img>
           <p>Price: {product.price} euro</p>
           <button> Add to cart</button>
-          <button> More details</button>
+          <button>
+            {" "}
+            <Link to={`/products/${product.id}`}>More details</Link>
+          </button>
         </div>
       ))}
     </div>
