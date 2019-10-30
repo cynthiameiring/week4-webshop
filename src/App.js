@@ -1,19 +1,16 @@
 import React from "react";
-import "./App.css";
-import ProductListContainer from "./components/ProductListContainer";
-import ProductDetailPageContainer from "./components/ProductDetailPageContainer";
 import { Route } from "react-router-dom";
+import ProductListContainer from "./components/ProductListContainer";
+import CartPage from "./components/CartPage";
+import ProductDetailPageContainer from "./components/ProductDetailPageContainer";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <p>Our amazing webshop</p>
-      <Route exact path="/" component={ProductListContainer} />
-      <Route
-        exact
-        path="/products/:id"
-        component={ProductDetailPageContainer}
-      />
+      <Route exact path='/' component={ProductListContainer} />
+      <Route path="/cart" component={CartPage} />
+      <Route exact path="/products/:id" component={ProductDetailPageContainer} />
     </div>
   );
 }

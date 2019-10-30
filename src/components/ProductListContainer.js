@@ -3,20 +3,18 @@ import ProductList from "./ProductList";
 import { connect } from "react-redux";
 
 class ProductListContainer extends React.Component {
-  //   selectProduct = id => {
-  //     // is a callback prop inside redux
-  //     this.props.dispatch({
-  //       type: "SELECT_Product",
-  //       payload: id
-  //     });
-  //   };
+  addProductToCart = (product) => {
+    this.props.dispatch({
+      type: "ADD_PRODUCT_TO_CART",
+      payload: product
+    });
+  }
 
   render() {
-    console.log("check", this.props.products);
     return (
       <ProductList
         products={this.props.products}
-        // selectProduct={this.selectProduct}
+        addProductToCart={this.addProductToCart}
       />
     );
   }
@@ -24,7 +22,7 @@ class ProductListContainer extends React.Component {
 
 const mapStateToProps = reduxState => {
   return {
-    products: reduxState.products // takes the reduxstate from the products.js makes it a prop.
+    products: reduxState.products, // takes the reduxstate from the products.js makes it a prop.
   };
 };
 
