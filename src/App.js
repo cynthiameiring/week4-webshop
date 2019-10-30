@@ -1,7 +1,8 @@
 import React from "react";
-import ProductListContainer from "./components/ProductListContainer";
 import { Route } from "react-router-dom";
+import ProductListContainer from "./components/ProductListContainer";
 import CartPage from "./components/CartPage";
+import ProductDetailPageContainer from "./components/ProductDetailPageContainer";
 import "./App.css";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Route exact path='/' component={ProductListContainer} />
       <Route path="/cart" component={CartPage} />
+      <Route exact path="/products/:id" component={ProductDetailPageContainer} />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Product.css";
 import Header from "./Header";
+import { Link } from "react-router-dom";
 
 export default function ProductList(props) {
   return (
@@ -15,7 +16,10 @@ export default function ProductList(props) {
           <button onClick={() => props.addProductToCart(product)}>
             Add to cart
           </button>
-          <button> More details</button>
+          <button>
+            {" "}
+            <Link to={`/products/${product.id}`}>More details</Link>
+          </button>
         </div>
       ))}
     </div>
