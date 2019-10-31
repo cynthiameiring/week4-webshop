@@ -10,7 +10,7 @@ export default function ProductList(props) {
       {props.products.map(product => (
         <div className="product" key={product.id}>
           <p>{product.name}</p>
-          <img src={product.imageUrl} alt=""></img>
+          <img className="product-image" src={product.imageUrl} alt=""></img>
           <p>Price: {product.price} €</p>
           <button onClick={() => props.addProductToCart(product)}>
             Add to cart
