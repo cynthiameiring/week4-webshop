@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import Header from "./Header";
+//import Header from "./Header";
 
 function CartPage(props) {
   return (
     <div className="cart-info">
-      <Header />
+      {/* <Header /> */}
       <h1>Your Cart</h1>
       <div>
         Items in Cart:{" "}
