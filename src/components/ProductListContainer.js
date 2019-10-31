@@ -2,7 +2,7 @@ import React from "react";
 import ProductList from "./ProductList";
 import { connect } from "react-redux";
 import { getProducts } from "../actions/products";
-import { addProductToCart } from "../actions/addToCart";
+import { addProductToCart } from '../actions/add-to-cart'
 
 class ProductListContainer extends React.Component {
   componentDidMount() {
