@@ -1,12 +1,10 @@
 import React from "react";
 import "./ProductList.css";
-//import Header from "./Header";
 import { Link } from "react-router-dom";
 
 export default function ProductList(props) {
   return (
     <div className="product-container">
-      {/* <Header /> */}
       {props.products.map(product => (
         <div className="product" key={product.id}>
           <p>{product.name}</p>
