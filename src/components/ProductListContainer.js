@@ -2,24 +2,18 @@ import React from "react";
 import ProductList from "./ProductList";
 import { connect } from "react-redux";
 import { getProducts } from "../actions/products";
+import { addProductToCart } from "../actions/addToCart";
 
 class ProductListContainer extends React.Component {
   componentDidMount() {
     this.props.getProducts();
   }
 
-  addProductToCart = product => {
-    this.props.dispatch({
-      type: "ADD_PRODUCT_TO_CART",
-      payload: product
-    });
-  };
-
   render() {
     return (
       <ProductList
         products={this.props.products}
-        addProductToCart={this.addProductToCart}
+        addProductToCart={this.props.addProductToCart}
       />
     );
   }
@@ -33,5 +27,5 @@ const mapStateToProps = reduxState => {
 
 export default connect(
   mapStateToProps,
-  { getProducts }
+  { getProducts, addProductToCart }
 )(ProductListContainer);

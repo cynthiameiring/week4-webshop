@@ -1,4 +1,4 @@
-const reducer = (state = [], action) => {
+export default (state = [], action) => {
   switch (action.type) {
     case "ADD_PRODUCT_TO_CART": {
       return [...state, action.payload];
@@ -7,6 +7,4 @@ const reducer = (state = [], action) => {
       return state;
     }
   }
-}
-
-export default reducer
+};
