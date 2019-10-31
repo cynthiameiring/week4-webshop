@@ -1,22 +1,23 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-//import Header from "./Header";
+import "./CartPage.css";
 
-function CartPage(props) {
+export default function CartPage(props) {
   return (
-    <div className="cart-info">
+    <div>
       {/* <Header /> */}
       <h1>Your Cart</h1>
-      <div>
-        Items in Cart:{" "}
+
+      <div className="products-container">
         {props.cartProducts.map(item => (
-          <ul>
-            <li>
-              <img className="" alt="" src={item.imageUrl} />
-              <p>Price: {item.price} €</p>
-            </li>
-          </ul>
+          <div className="product-in-cart">
+            <img className="image-in-cart" alt="" src={item.imageUrl} />
+            <p>Price: {item.price} €</p>
+            <button onClick={() => props.deleteProductFromCart(item)}>
+              Delete from cart
+            </button>
+          </div>
         ))}
       </div>
       <h2>
@@ -24,7 +25,7 @@ function CartPage(props) {
         {props.cartProducts
           .map(item => item.price)
           .reduce((total, price) => {
-            return total + Number(price);
+            return (parseFloat(total) + parseFloat(price)).toFixed(2);
           }, 0)}{" "}
         €
       </h2>
@@ -34,11 +35,3 @@ function CartPage(props) {
     </div>
   );
 }
-
-const mapStateToProps = reduxState => {
-  return {
-    cartProducts: reduxState.cartProducts
-  };
-};
-
-export default connect(mapStateToProps)(CartPage);

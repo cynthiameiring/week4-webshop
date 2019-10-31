@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import ProductListContainer from "./components/ProductListContainer";
-import CartPage from "./components/CartPage";
+import CartPageContainer from "./components/CartPageContainer";
 import ProductDetailPageContainer from "./components/ProductDetailPageContainer";
 import ExtraHeader from "./components/ExtraHeader";
 import Header from "./components/Header";
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Route path="/cart" component={CartPage} />
+      <Route path="/cart" component={CartPageContainer} />
       <Route exact path="/" component={ExtraHeader} />
       <Route exact path="/" component={ProductListContainer} />
 

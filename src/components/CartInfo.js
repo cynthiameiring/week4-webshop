@@ -12,7 +12,7 @@ function CartInfo(props) {
         {props.cartProducts
           .map(item => item.price)
           .reduce((total, price) => {
-            return total + Number(price);
+            return (parseFloat(total) + parseFloat(price)).toFixed(2);
           }, 0)}{" "}
         €
       </p>
