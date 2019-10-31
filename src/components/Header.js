@@ -6,10 +6,9 @@ export default class Header extends React.Component {
     return (
       <div className="header">
         <div className="intro">
-          <h1>OIKIA</h1>
-          <p>Welcome to our furniture webshop</p>
+          <h1 className="title">OIKIA</h1>
         </div>
-          <CartInfo />
+        <CartInfo />
       </div>
     );
   }
