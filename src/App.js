@@ -10,7 +10,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Route path="/" component={Header} />
+      <Header />
       <Route path="/cart" component={CartPage} />
       <Route exact path="/" component={ExtraHeader} />
       <Route exact path="/" component={ProductListContainer} />
