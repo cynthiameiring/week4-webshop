@@ -5,6 +5,7 @@ import ProductDetailPage from "./ProductDetailPage";
 class ProductDetailPageContainer extends React.Component {
   render() {
     const productId = this.props.match.params.id;
+
     const product = this.props.products.find(
       element => element.id === Number(productId)
     );
