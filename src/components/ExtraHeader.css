@@ -1,0 +1,28 @@
+.extra-header {
+  margin-top: 5%;
+  display: flex;
+  text-align: center;
+  background: url("../images/extraheader.jpeg");
+  background-size: auto auto;
+  padding: 5%;
+}
+
+.title-in-header {
+  font-size: 80px;
+  font-family: "Playball", cursive;
+  color: #ce9136;
+  margin: 5%;
+}
+
+.transbox {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  margin: auto;
+  width: 90%;
+  vertical-align: middle;
+  background-color: #ffffff;
+  opacity: 0.8;
+  padding: 2%;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Playball&display=swap");

@@ -1,0 +1,21 @@
+.product {
+  background-color: #f2e8de;
+  margin: 2%;
+  padding: 2%;
+  width: 42%;
+}
+
+.header {
+  width: 100%;
+  display: inline-flex;
+  border: 5px solid red;
+}
+.intro {
+  margin: 0 30%;
+}
+
+.product-container {
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+}

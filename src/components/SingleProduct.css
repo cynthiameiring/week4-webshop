@@ -1,0 +1,9 @@
+.single-product {
+  display: flex;
+  margin: 5%;
+  justify-content: center;
+}
+
+.description {
+  margin: 5%;
+}
