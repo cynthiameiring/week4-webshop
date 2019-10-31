@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import products from "./products";
-import cartProducts from "./add-product";
+import cartProducts from "./cart";
 
 export default combineReducers({
   products: products,

@@ -9,6 +9,7 @@ class ProductDetailPageContainer extends React.Component {
     const product = this.props.products.find(
       element => element.id === Number(productId)
     );
+
     return (
       <ProductDetailPage
         productName={product.name}
