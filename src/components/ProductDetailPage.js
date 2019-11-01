@@ -10,9 +10,11 @@ export default function ProductDetailPage(props) {
       </div>
       <div className="description">
         <h2>{props.productName}</h2>
-        <h3>Price: € {props.productPrice}</h3>
         <p>{props.productDescription}</p>
-        <Link to="/"> Go back</Link>
+        <h3>Price: € {props.productPrice}</h3>
+        <h3 className='go-back'>
+          <Link to="/"> Go back</Link>
+        </h3>
       </div>
     </div>
   );

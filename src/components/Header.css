@@ -1,13 +1,26 @@
+.header {
+  width: 100%;
+  display: inline-flex;
+  background-color: #f5f5f5;
+}
 .cart-info {
-  width: 21%;
-  right: 7%;
-  top: 3%;
-  position: absolute;
+  width: 20%;
+  margin: 0 -7%;
   border: 10px solid #d4d4d6;
 }
 .go-to-cart {
-    text-decoration: none;
-    padding: 3%;
-    font-size: 115%;
-    background-color: lightblue;
+  text-decoration: none;
+  padding: 3%;
+  font-size: 115%;
+  background-color: #d4d4d6;
+}
+.title {
+  font-size: 110px;
+  margin-top: 5%;
+}
+
+.intro {
+  width: 67%;
+  text-align: left;
+  padding-left: 10%;
 }
