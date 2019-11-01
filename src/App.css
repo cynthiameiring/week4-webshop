@@ -7,3 +7,11 @@ a:visited { color: white; }
 a:hover { color: white; }
 a:focus {  color: white; } 
 a:hover, a:active {  color: white; }
+
+button {
+  font-size: 12px;
+  border: none;
+  background-color: #b28c63;
+  color: white;
+  margin: 2%;
+}

@@ -12,12 +12,12 @@ export default function CartPage(props) {
           <div className="product-in-cart">
             <img className="image-in-cart" alt="" src={item.imageUrl} />
             <p>Price: €{item.price}</p>
-            <div>
-              <button onClick={() => props.decreaseQuantity(item)}>-</button>
+            <div className="cart-details">
+              <button className="change-quantity-button" onClick={() => props.decreaseQuantity(item)}>-</button>
               <p>Quantity: {item.quantity}</p>
-              <button onClick={() => props.increaseQuantity(item)}>+</button>
+              <button className="change-quantity-button" onClick={() => props.increaseQuantity(item)}>+</button>
             </div>
-            <p>Total: €{parseFloat(item.price * item.quantity)}</p>
+            <p>Total: €{parseFloat(item.price * item.quantity).toFixed(2)}</p>
             <button onClick={() => props.deleteProductFromCart(item)}>
               Delete from cart
             </button>
@@ -25,13 +25,13 @@ export default function CartPage(props) {
         ))}
       </div>
       <h2>
-        Total:{" "}
+        Total:{" "}€{" "}
         {props.cartProducts
           .map(item => item.price * item.quantity)
           .reduce((total, price) => {
             return (parseFloat(total) + parseFloat(price)).toFixed(2);
-          }, 0)}{" "}
-        €
+          }, 0)}
+        
       </h2>
       <button>
         <Link to={"/"}>Continue Shopping</Link>
