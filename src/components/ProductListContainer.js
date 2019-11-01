@@ -15,25 +15,25 @@ class ProductListContainer extends React.Component {
         <div>
         <button
             className="category-button"
-            onClick={() => this.props.categorize(0, this.props.products)}
+            onClick={() => this.props.categorize(0)}
           >
             All
           </button>
           <button
             className="category-button"
-            onClick={() => this.props.categorize(2, this.props.products)}
+            onClick={() => this.props.categorize(2)}
           >
             Clothes
           </button>
           <button
             className="category-button"
-            onClick={() => this.props.categorize(1, this.props.products)}
+            onClick={() => this.props.categorize(1)}
           >
             Shoes
           </button>
           <button
             className="category-button"
-            onClick={() => this.props.categorize(3, this.props.products)}
+            onClick={() => this.props.categorize(3)}
           >
             Accessories
           </button>

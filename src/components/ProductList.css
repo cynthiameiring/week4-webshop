@@ -55,5 +55,9 @@
   left: auto;
 }
 .product-button {
-  margin: 2%
+  margin: 2%;
+}
+a {
+  color: black;
+  text-decoration: none;
 }
