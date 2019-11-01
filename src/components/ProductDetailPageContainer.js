@@ -22,7 +22,7 @@ class ProductDetailPageContainer extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    products: state.products
+    products: state.categorized
   };
 };
 

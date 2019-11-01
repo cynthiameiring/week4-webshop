@@ -1,10 +1,8 @@
 import { combineReducers } from "redux";
-import products from "./products";
 import cartProducts from "./cart";
-import catagorized from "./catagorize";
+import categorized from "./categorize";
 
 export default combineReducers({
-  products: products,
   cartProducts: cartProducts,
-  categorized: catagorized
+  categorized: categorized
 });

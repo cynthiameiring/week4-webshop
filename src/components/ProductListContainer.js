@@ -1,34 +1,39 @@
 import React from "react";
 import ProductList from "./ProductList";
 import { connect } from "react-redux";
-import { getProducts } from "../actions/products";
 import { addProductToCart } from "../actions/add-to-cart";
-import { catagorize } from "../actions/catagorize";
+import { categorize } from "../actions/categorize";
 
 class ProductListContainer extends React.Component {
   componentDidMount() {
-    this.props.getProducts();
+    this.props.categorize(0);
   }
 
   render() {
     return (
       <div>
         <div>
+        <button
+            className="category-button"
+            onClick={() => this.props.categorize(0)}
+          >
+            All
+          </button>
           <button
-            className="catagory-button"
-            onClick={() => this.props.catagorize(2)}
+            className="category-button"
+            onClick={() => this.props.categorize(2)}
           >
             Clothes
           </button>
           <button
-            className="catagory-button"
-            onClick={() => this.props.catagorize(1)}
+            className="category-button"
+            onClick={() => this.props.categorize(1)}
           >
             Shoes
           </button>
           <button
-            className="catagory-button"
-            onClick={() => this.props.catagorize(3)}
+            className="category-button"
+            onClick={() => this.props.categorize(3)}
           >
             Accessories
           </button>
@@ -43,17 +48,12 @@ class ProductListContainer extends React.Component {
 }
 
 const mapStateToProps = reduxState => {
-  if (reduxState.categorized.length !== 0) {
     return {
       products: reduxState.categorized
     };
-  }
-  return {
-    products: reduxState.products
-  };
 };
 
 export default connect(
   mapStateToProps,
-  { getProducts, addProductToCart, catagorize }
+  { addProductToCart, categorize }
 )(ProductListContainer);
