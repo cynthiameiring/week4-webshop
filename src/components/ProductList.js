@@ -10,10 +10,10 @@ export default function ProductList(props) {
           <h3>{product.name}</h3>
           <img className="product-image" src={product.imageUrl} alt=""></img>
           <p>Price: € {product.price}</p>
-          <button onClick={() => props.addProductToCart(product)}>
+          <button className="product-button" onClick={() => props.addProductToCart(product)}>
             Add to cart
           </button>
-          <button>
+          <button className="product-button">
             {" "}
             <Link to={`/products/${product.id}`}>More details</Link>
           </button>
