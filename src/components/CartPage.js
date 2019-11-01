@@ -11,12 +11,13 @@ export default function CartPage(props) {
         {props.cartProducts.map(item => (
           <div className="product-in-cart">
             <img className="image-in-cart" alt="" src={item.imageUrl} />
-            <p>Price: {item.price} €</p>
+            <p>Price: €{item.price}</p>
             <div>
               <button onClick={() => props.decreaseQuantity(item)}>-</button>
               <p>Quantity: {item.quantity}</p>
               <button onClick={() => props.increaseQuantity(item)}>+</button>
             </div>
+            <p>Total: €{parseFloat(item.price * item.quantity)}</p>
             <button onClick={() => props.deleteProductFromCart(item)}>
               Delete from cart
             </button>
@@ -26,7 +27,7 @@ export default function CartPage(props) {
       <h2>
         Total:{" "}
         {props.cartProducts
-          .map(item => item.price)
+          .map(item => item.price * item.quantity)
           .reduce((total, price) => {
             return (parseFloat(total) + parseFloat(price)).toFixed(2);
           }, 0)}{" "}
