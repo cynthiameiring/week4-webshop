@@ -6,11 +6,14 @@ function CartInfo(props) {
   return (
     <div className="cart-info">
       <h2>Your Cart</h2>
-      <p>Items in Cart: {props.cartProducts.length}</p>
+      <p>Items in Cart: {props.cartProducts.map(item => item.quantity)
+          .reduce((total, quantity) => {
+            return (total + quantity)
+          }, 0)}</p>
       <p>
-        total:{" "}
+        Total:{" "}
         {props.cartProducts
-          .map(item => item.price)
+          .map(item => item.price*item.quantity)
           .reduce((total, price) => {
             return (parseFloat(total) + parseFloat(price)).toFixed(2);
           }, 0)}{" "}

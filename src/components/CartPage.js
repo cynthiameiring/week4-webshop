@@ -12,7 +12,11 @@ export default function CartPage(props) {
           <div className="product-in-cart">
             <img className="image-in-cart" alt="" src={item.imageUrl} />
             <p>Price: {item.price} €</p>
-            <p>Quantity: {item.quantity}</p>
+            <div>
+              <button onClick={() => props.decreaseQuantity(item)}>-</button>
+              <p>Quantity: {item.quantity}</p>
+              <button onClick={() => props.increaseQuantity(item)}>+</button>
+            </div>
             <button onClick={() => props.deleteProductFromCart(item)}>
               Delete from cart
             </button>

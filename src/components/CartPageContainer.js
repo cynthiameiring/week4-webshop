@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import "./CartPage.css";
 import CartPage from "./CartPage";
 import { deleteProductFromCart } from "../actions/delete-from-cart";
+import {increaseQuantity} from '../actions/quantity'
+import {decreaseQuantity} from '../actions/quantity'
+
 
 class CartPageContainer extends React.Component {
   render() {
@@ -11,6 +14,8 @@ class CartPageContainer extends React.Component {
       <div>
         <CartPage
           cartProducts={this.props.cartProducts}
+          increaseQuantity = {this.props.increaseQuantity}
+          decreaseQuantity = {this.props.decreaseQuantity}
           deleteProductFromCart={this.props.deleteProductFromCart}
         />
       </div>
@@ -26,5 +31,5 @@ const mapStateToProps = reduxState => {
 
 export default connect(
   mapStateToProps,
-  { deleteProductFromCart }
+  { deleteProductFromCart, increaseQuantity, decreaseQuantity }
 )(CartPageContainer);
