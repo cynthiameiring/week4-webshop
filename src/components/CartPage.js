@@ -11,8 +11,12 @@ export default function CartPage(props) {
         {props.cartProducts.map(item => (
           <div className="product-in-cart">
             <img className="image-in-cart" alt="" src={item.imageUrl} />
-            <p>Quantity: {item.quantity}</p>
             <p>Price: €{item.price}</p>
+            <div>
+              <button onClick={() => props.decreaseQuantity(item)}>-</button>
+              <p>Quantity: {item.quantity}</p>
+              <button onClick={() => props.increaseQuantity(item)}>+</button>
+            </div>
             <p>Total: €{parseFloat(item.price * item.quantity)}</p>
             <button onClick={() => props.deleteProductFromCart(item)}>
               Delete from cart

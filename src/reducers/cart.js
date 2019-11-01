@@ -24,6 +24,16 @@ export default (state = [], action) => {
       newCart.splice(index, 1);
       return newCart;
     }
+    case "INCREASE_QUANTITY": {
+      const newState = [...state]
+      action.payload.quantity = action.payload.quantity + 1
+      return newState
+    }
+    case "DECREASE_QUANTITY": {
+      const newState = [...state]
+      action.payload.quantity = action.payload.quantity - 1
+      return newState
+    }
     default: {
       return state;
     }
