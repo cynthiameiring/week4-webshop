@@ -1,13 +1,15 @@
 .products-container {
   display: flex;
   flex-wrap: wrap;
+  margin: 3%;
 }
 .product-in-cart {
   width: 30%;
 }
 
 .image-in-cart {
-  width: 80%;
+  width: 70%;
+  height: 60%;
 }
 .cart-details {
   display: flex;
