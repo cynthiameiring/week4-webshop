@@ -1,5 +1,6 @@
 import React from "react";
 import CartInfo from "./CartInfo";
+import './Header.css'
 
 export default class Header extends React.Component {
   render() {
@@ -8,7 +9,7 @@ export default class Header extends React.Component {
         <div className="intro">
           <h1 className="title">OIKIA</h1>
         </div>
-        <CartInfo />
+          <CartInfo />
       </div>
     );
   }

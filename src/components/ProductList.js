@@ -9,7 +9,7 @@ export default function ProductList(props) {
         <div className="product" key={product.id}>
           <p>{product.name}</p>
           <img className="product-image" src={product.imageUrl} alt=""></img>
-          <p>Price: {product.price} €</p>
+          <p>Price: €{" "}{product.price}</p>
           <button onClick={() => props.addProductToCart(product)}>
             Add to cart
           </button>

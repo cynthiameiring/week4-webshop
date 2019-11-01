@@ -1,0 +1,12 @@
+.cart-info {
+  width: 21%;
+  right: 7%;
+  top: 3%;
+  position: absolute;
+  border: 10px solid #d4d4d6;
+}
+.go-to-cart {
+    text-decoration: none;
+    padding: 3%;
+    font-size: 115%;
+}

@@ -11,16 +11,16 @@ function CartInfo(props) {
             return (total + quantity)
           }, 0)}</p>
       <p>
-        Total:{" "}
+        Total:{" "}€{" "}
         {props.cartProducts
           .map(item => item.price*item.quantity)
           .reduce((total, price) => {
             return (parseFloat(total) + parseFloat(price)).toFixed(2);
-          }, 0)}{" "}
-        €
+          }, 0)}
+        
       </p>
-      <button>
-        <Link to={"/cart"}>Go to Cart</Link>
+      <button className='go-to-cart'>
+        <Link to={"/cart"}>Go to 🛒</Link>
       </button>
     </div>
   );
