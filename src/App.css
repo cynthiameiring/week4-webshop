@@ -1,13 +1,14 @@
 .App {
   text-align: center;
 }
+
 a { color: white; 
 text-decoration: none;}
 
-button {
+/* button {
   font-size: 12px;
   border: none;
   background-color: #b28c63;
   color: white;
   margin: 2%;
-}
+} */

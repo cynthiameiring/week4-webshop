@@ -35,6 +35,7 @@ export default (state = [], action) => {
         action.payload.quantity = action.payload.quantity - 1;
         return newState;
       }
+      break;
     }
     default: {
       return state;
