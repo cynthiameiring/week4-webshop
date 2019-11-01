@@ -6,7 +6,7 @@ export default function ProductDetailPage(props) {
   return (
     <div className="single-product">
       <div>
-        <img src={props.productImage}></img>
+        <img className="details-image" src={props.productImage} alt=""></img>
       </div>
       <div className="description">
         <h2>{props.productName}</h2>

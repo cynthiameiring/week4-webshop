@@ -9,3 +9,10 @@
 .image-in-cart {
   width: 80%;
 }
+.cart-details {
+  display: flex;
+  justify-content: center;
+}
+.change-quantity-button {
+  margin: 4%;
+}
