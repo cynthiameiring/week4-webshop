@@ -3,10 +3,6 @@
 }
 a { color: white; 
 text-decoration: none;}
-a:visited { color: white; }
-a:hover { color: white; }
-a:focus {  color: white; } 
-a:hover, a:active {  color: white; }
 
 button {
   font-size: 12px;
