@@ -1,12 +1,10 @@
 import React from "react";
-import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./CartPage.css";
 
 export default function CartPage(props) {
   return (
     <div>
-      {/* <Header /> */}
       <h1>Your Cart</h1>
 
       <div className="products-container">
@@ -14,6 +12,7 @@ export default function CartPage(props) {
           <div className="product-in-cart">
             <img className="image-in-cart" alt="" src={item.imageUrl} />
             <p>Price: {item.price} €</p>
+            <p>Quantity: {item.quantity}</p>
             <button onClick={() => props.deleteProductFromCart(item)}>
               Delete from cart
             </button>

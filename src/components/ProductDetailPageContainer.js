@@ -15,6 +15,7 @@ class ProductDetailPageContainer extends React.Component {
         productName={product.name}
         productImage={product.imageUrl}
         productPrice={product.price}
+        productDescription={product.description}
       />
     );
   }
