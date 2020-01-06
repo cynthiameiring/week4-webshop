@@ -6,7 +6,9 @@ export default function CartPage(props) {
   return (
     <div>
       <h1>Your Cart</h1>
-
+      <button className="continue-shopping">
+        <Link to={"/"}>Continue Shopping</Link>
+      </button>
       <div className="products-container">
         {props.cartProducts.map(item => (
           <div className="product-in-cart">
@@ -33,9 +35,7 @@ export default function CartPage(props) {
           }, 0)}
         
       </h2>
-      <button>
-        <Link to={"/"}>Continue Shopping</Link>
-      </button>
+      <button>Proceed To Checkout</button>
     </div>
   );
 }

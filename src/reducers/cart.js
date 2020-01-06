@@ -34,8 +34,7 @@ export default (state = [], action) => {
         const newState = [...state];
         action.payload.quantity = action.payload.quantity - 1;
         return newState;
-      } else return state;
-      break;
+      } else return state
     }
     default: {
       return state;
