@@ -1,6 +1,6 @@
 # OIKIA webshop
 
-## ✈️ [Check out the demo here](#Demo)✈️
+## 👚 [Check out the demo here](#Demo)👚
 
 ## Table of contents
 
