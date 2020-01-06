@@ -13,7 +13,7 @@ class ProductListContainer extends React.Component {
     return (
       <div>
         <div>
-        <button
+          <button
             className="category-button"
             onClick={() => this.props.categorize(0)}
           >
@@ -48,12 +48,11 @@ class ProductListContainer extends React.Component {
 }
 
 const mapStateToProps = reduxState => {
-    return {
-      products: reduxState.categorized
-    };
+  return {
+    products: reduxState.categorized
+  };
 };
 
-export default connect(
-  mapStateToProps,
-  { addProductToCart, categorize }
-)(ProductListContainer);
+export default connect(mapStateToProps, { addProductToCart, categorize })(
+  ProductListContainer
+);

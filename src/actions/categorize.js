@@ -6,16 +6,15 @@ export function categorize(number) {
       .then(res => res.json())
       .then(data => {
         if (number === 0) {
-          dispatch(setProducts(data))
+          dispatch(setProducts(data));
         } else
-        dispatch(
-          setProducts(data.filter(element => element.categoryId === number))
-        );
+          dispatch(
+            setProducts(data.filter(element => element.categoryId === number))
+          );          
       });
   };
 }
 
-// import { setProducts } from "./set-products";
 
 // function set (number, data, dispatch) {
 //   if (number === 0) {
